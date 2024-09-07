@@ -1,10 +1,11 @@
 {
-  "gitSyncId": "66dcc05a0843ba2e66daa185_bf455277-7dd6-4f46-bfa3-9e03d32cb105",
+  "gitSyncId": "66dcc05a0843ba2e66daa185_7412cfd8-fe74-4616-89a0-a5ba1bd748dd",
   "id": "MoviesCMS_getMovies",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
+      "body": "SELECT * FROM public.\"movies\" LIMIT 10;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
