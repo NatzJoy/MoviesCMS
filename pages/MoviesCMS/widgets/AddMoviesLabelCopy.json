@@ -4,7 +4,7 @@
   "borderColor": "#000000",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "2",
-  "bottomRow": 167,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "iqeseqo88o",
-  "leftColumn": 22,
+  "leftColumn": 20,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -33,23 +33,23 @@
   "mobileRightColumn": 43,
   "mobileTopRow": 110,
   "needsErrorInfo": false,
-  "originalBottomRow": 168,
-  "originalTopRow": 164,
+  "originalBottomRow": 7,
+  "originalTopRow": 1,
   "overflow": "NONE",
   "parentColumnSpace": 12.75,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 41,
+  "rightColumn": 44,
   "shouldTruncate": false,
-  "text": "ADD NEW MOVIES",
+  "text": "CMS Movie Management DB",
   "textAlign": "CENTER",
   "textColor": "#581c87",
-  "topRow": 163,
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "xhvit8sdex",
-  "widgetName": "AddMoviesLabel"
+  "widgetId": "l31brerx39",
+  "widgetName": "AddMoviesLabelCopy"
 }
