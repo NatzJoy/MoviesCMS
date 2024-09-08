@@ -174,6 +174,9 @@
     },
     {
       "key": "onRowSelected"
+    },
+    {
+      "key": "onAddNewRowDiscard"
     }
   ],
   "enableClientSideSearch": true,
@@ -195,8 +198,10 @@
   "mobileLeftColumn": 12,
   "mobileRightColumn": 46,
   "mobileTopRow": 12,
+  "multiRowSelection": false,
   "needsErrorInfo": false,
-  "onAddNewRowSave": "{{storeValue('enter', updateMovie.data);\nstoreValue('enter', addNewMovie.data);}}",
+  "onAddNewRowDiscard": "{{removeValue(updateMovie.data);}}",
+  "onAddNewRowSave": "{{storeValue('enter', updateMovie.data);\nstoreValue('enter', addNewMovie.data);\nstoreValue(updateMovie.data, updateMovie.data);}}",
   "onRowSelected": "{{removeValue('ctrl x').then(() => {\n  removeValue(\"\");\n});}}",
   "parentColumnSpace": 12.75,
   "parentId": "0",
