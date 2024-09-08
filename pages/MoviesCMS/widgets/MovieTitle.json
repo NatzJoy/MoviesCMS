@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "0.375rem",
-  "bottomRow": 124,
+  "bottomRow": 169,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -15,6 +15,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onSubmit"
+    },
+    {
+      "key": "onTextChanged"
     }
   ],
   "iconAlign": "left",
@@ -42,6 +45,7 @@
   "mobileTopRow": 114,
   "needsErrorInfo": false,
   "onSubmit": "{{addNewMovie.run()}}",
+  "onTextChanged": "{{resetWidget(\"MovieTitle\", true);}}",
   "parentColumnSpace": 12.75,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -50,7 +54,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 14,
   "showStepArrows": false,
-  "topRow": 117,
+  "topRow": 162,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "thqgauujmb",

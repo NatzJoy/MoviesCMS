@@ -1,10 +1,11 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": true,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 108,
+  "bottomRow": 156,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -161,7 +162,20 @@
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onAddNewRowSave"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onDiscard"
+    },
+    {
+      "key": "onRowSelected"
+    }
+  ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -170,18 +184,20 @@
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": true,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "52agczh2ot",
   "label": "Data",
-  "leftColumn": 0,
+  "leftColumn": 1,
   "minWidth": 450,
   "mobileBottomRow": 40,
   "mobileLeftColumn": 12,
   "mobileRightColumn": 46,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
+  "onAddNewRowSave": "{{storeValue('enter', updateMovie.data);\nstoreValue('enter', addNewMovie.data);}}",
+  "onRowSelected": "{{removeValue('ctrl x').then(() => {\n  removeValue(\"\");\n});}}",
   "parentColumnSpace": 12.75,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -217,6 +233,8 @@
       "isVisible": true,
       "label": "Save / Discard",
       "notation": "standard",
+      "onDiscard": "{{resetWidget(\"\",true)}}",
+      "onSave": "{{storeValue('enter', updateMovie.data);}}",
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -850,16 +868,16 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{getMovies.data}}",
   "textSize": "0.875rem",
-  "topRow": 19,
+  "topRow": 8,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "im9sjdvtnh",
+  "widgetId": "4zuiarjo6l",
   "widgetName": "Table1"
 }

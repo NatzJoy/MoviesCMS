@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 124,
+  "bottomRow": 169,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -15,7 +15,14 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSubmit"
+    },
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "iconAlign": "left",
   "iconName": "add",
   "inputType": "TEXT",
@@ -40,8 +47,10 @@
   "mobileRightColumn": 46,
   "mobileTopRow": 117,
   "needsErrorInfo": false,
-  "originalBottomRow": 124,
-  "originalTopRow": 117,
+  "onSubmit": "{{addNewMovie.run()}}",
+  "onTextChanged": "{{removeValue('/');}}",
+  "originalBottomRow": 169,
+  "originalTopRow": 162,
   "parentColumnSpace": 12.75,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -50,7 +59,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 30,
   "showStepArrows": false,
-  "topRow": 117,
+  "topRow": 162,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "vzggeqjrxk",
