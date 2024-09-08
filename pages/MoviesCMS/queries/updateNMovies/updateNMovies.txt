@@ -1,0 +1,6 @@
+UPDATE public.movies
+SET title = '{{Table1.updatedRow.title}}',
+    genres = '{{Table1.updatedRow.genres}}',
+    overview = '{{Table1.updatedRow.overview}}',
+    keywords = '{{Table1.updatedRow.keywords}}'
+WHERE id = {{Table1.selectedRow.id}};
