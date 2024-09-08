@@ -1,10 +1,11 @@
 {
-  "gitSyncId": "66dcc05a0843ba2e66daa185_bf455277-7dd6-4f46-bfa3-9e03d32cb105",
-  "id": "MoviesCMS_defaultMoviepicker",
+  "gitSyncId": "66dcc05a0843ba2e66daa185_f966a5f8-a2ce-476e-b599-62920ba6898a",
+  "id": "MoviesCMS_addNewMovie",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
+      "body": "INSERT INTO public.movies (title, genres, tagline, overview)\nVALUES (\n    '{{MovieTitle.text}}',  -- Movie title\n    '{{Genres.text}}',      -- Genres\n    '{{Tagline.text}}',     -- Tagline (replacing release date)\n    '{{Overview.text}}'     -- Overview\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -21,8 +22,13 @@
       "name": "movie_subset",
       "pluginId": "postgres-plugin"
     },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": false,
-    "name": "defaultMoviepicker",
+    "name": "addNewMovie",
     "pageId": "MoviesCMS",
     "userSetOnLoad": false
   }

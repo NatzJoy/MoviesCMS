@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "66dcc05a0843ba2e66daa185_7412cfd8-fe74-4616-89a0-a5ba1bd748dd",
-  "id": "MoviesCMS_getMovies",
+  "gitSyncId": "66dcc05a0843ba2e66daa185_219fa1bf-dfde-4a59-991f-e5f9e8970291",
+  "id": "MoviesCMS_updateMovie",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.movies\nWHERE \n    ( title ILIKE '%{{CustomSearchBar.text}}%' OR genres ILIKE '%{{CustomSearchBar.text}}%' )",
+      "body": "UPDATE public.movies\nSET title = '{{Table1.updatedRow.title}}',\n    genres = '{{Table1.updatedRow.genres}}',\n    overview = '{{Table1.updatedRow.overview}}',\n    keywords = '{{Table1.updatedRow.keywords}}'\nWHERE id = {{Table1.selectedRow.id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
-    "name": "getMovies",
+    "executeOnLoad": false,
+    "name": "updateMovie",
     "pageId": "MoviesCMS",
     "userSetOnLoad": false
   }

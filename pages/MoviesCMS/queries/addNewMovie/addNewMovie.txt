@@ -1,0 +1,7 @@
+INSERT INTO public.movies (title, genres, tagline, overview)
+VALUES (
+    '{{MovieTitle.text}}',  -- Movie title
+    '{{Genres.text}}',      -- Genres
+    '{{Tagline.text}}',     -- Tagline (replacing release date)
+    '{{Overview.text}}'     -- Overview
+);
